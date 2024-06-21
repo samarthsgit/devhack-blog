@@ -29,12 +29,14 @@
 </main>
 
 <script>
-    let totalArticles = document.querySelectorAll(".article").length;
-    for (let i=0; i < totalArticles; i++) {
-        document.querySelector(`#title${i}`).addEventListener('click', () => {
+    document.addEventListener('DOMContentLoaded', () => {
+        let totalArticles = document.querySelectorAll(".article").length;
+        for (let i=0; i < totalArticles; i++) {
+            document.querySelector(`#title${i}`).addEventListener('click', () => {
             document.querySelector(`#view${i}`).click();
         });
-    } 
+    }
+    });  
 </script>
 
 <%- include('partials/footer.ejs') %>
