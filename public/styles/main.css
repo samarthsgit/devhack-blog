@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-border: #c4e5f2;
+    --bkg-color: #FFF5E1;
+    --fg-color: #FF6969;
+    --nav-link-font-color: white;
+}
+
+html {
+    background-color: #FFF5E1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling Nav Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-bottom: 2px solid var(--fg-color);
+    overflow: hidden;
+}
+
+.logo-div img {
+    height: 150px;
+    margin-top: 8px;
+}
+
+.nav-links-div a {
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--fg-color);
+    color: var(--nav-link-font-color);
+    border-radius: 10px;
+    border: 4px solid var(--nav-link-font-color);
+    transition: 350ms;
+    
+}
+
+.nav-links-div a:hover {
+    background-color: var(--nav-link-font-color);
+    border: 4px solid var(--fg-color);
+    color: var(--fg-color);
+}
+
+.nav-links-div {
+    display: flex;
+    width: 250px;
+    justify-content: space-evenly;
+}
+
+/* Styling articles */
+.article {
+    background-color: var(--bkg-color);
+    margin-top: 5px;
+    border: 4px solid var(--fg-color);
+    border-radius: 5px;
+    position: relative;
+    
+}
+
+.title {
+    font-size: 30px;
+    margin: 7px 0 0 10px;
+}
+
+.author {
+    margin: 0 0 0 10px;
+    color: rgba(0, 0, 0, 0.813);
+}
+
+.author span {
+    margin-right: 2px;
+    font-size: 20px;
+    color: var(--fg-color);
+    font-weight: bolder;
+}
+
+.meta-content {
+    font-size: 16px;
+    margin: 0 0 0 10px;
+}
+
+.content {
+    font-size: 16px;
+    margin: 5px 10px 0 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    /* gap: 10px;
+    padding-right: 10px; */
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: flex-start;
+    width: 80vw;
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+form input {
+    font-size: 16px;
+    width: 60px;
+    height: 50px;
+    background-color: var(--fg-color);
+    color: var(--nav-link-font-color);
+    transition: 300ms;
+}
+
+form input:hover {
+    background-color: #C80036;
+}
+
+/* Styling Edit.ejs */
+
+form textarea {
+    font-size: 16px;
+    display: block;
+    margin: 5px 10px 5px 10px;
+    width: 96.6%;
+    padding: 5px;
+}
+
+.edit-text {
+    margin: 5px 10px 5px 10px;
+    font-size: 20px;
+}
+
+
