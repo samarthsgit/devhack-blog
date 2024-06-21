@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+<div class="article-container">
+        <div class="article">
+            <p class="title"> <%= article.title %> </p>
+            <p class="author"><span>|</span>By <%= article.author %></p>
+            <p class="content"><%= article.content %></p> 
+            <div class="buttons">
+                <form action="/edit" method="post">
+                    <input type="number" name="index" value="<%= index %>" hidden>
+                    <input type="submit" value="Edit" style="border-top-left-radius: 7px;">
+                </form>
+            </div>
+        </div>
+</div>
+</main>
+
+<%- include('partials/footer.ejs') %>

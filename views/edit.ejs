@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+<div class="article-container">
+        <div class="article">
+            <p class="title"> <%= article.title %> </p>
+            <!-- <p class="author"><%= article.author %></p> -->
+            <form action="/modify" method="post">
+                <input type="number" name="index" value="<%= index %>" hidden>
+                <p class="edit-text">Edit Metacontent:</p>
+                <textarea id="meta-content" name="metaContent" rows="3" cols="30" class="text-box"><%= article.metaContent %></textarea>
+                <p class="edit-text">Edit Content:</p>
+                <textarea id="content" name="content" rows="20" cols="30" class="text-box"><%= article.content %></textarea>
+                <div class="buttons">
+                    <input type="submit" value="Done" style="border-top-left-radius: 7px;">
+                </div>
+            </form>
+        </div>
+</div>
+</main>
+
+<%- include('partials/footer.ejs') %>

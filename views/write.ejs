@@ -1,0 +1,58 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+<div class="article-container">
+<div class="article">
+<form action="/publish" method="post">
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title">
+    <label for="author">Author:</label>
+    <input type="text" name="author" id="author">
+    <label for="content">Content:</label>
+    <!-- <input type="text" name="content" id="content"> -->
+    <textarea name="content" id="content" rows="20" cols="30" class="text-box"></textarea>
+    <label for="meta-content">Meta Content:</label>
+    <!-- <input type="text" name="metaContent" id="meta-content"> -->
+    <textarea name="metaContent" id="meta-content" rows="5" cols="30" class="text-box"></textarea>
+    <input type="submit" value="Publish" id="submit">
+</form>
+</div>
+</div>
+</main>
+
+<%- include('partials/footer.ejs') %>
+
+<style>
+    form input {
+        background-color: white;
+        width: 99.5%;
+        margin: 5px 0;
+        color:black;
+    }
+    .text-box {
+        width: 99.5%;
+        margin: 5px 0;
+    }
+    form input:hover {
+        background-color: white;
+    }
+    .article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 7px;
+    }
+    #submit {
+        background-color: #ff6969;
+        color:white;
+    }
+    #submit:hover {
+        background-color: #fd3c3c;
+    }
+</style>

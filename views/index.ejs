@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+<main>
+<div class="article-container">
+    <% articles.forEach(article => { %>
+        <div class="article">
+            <p class="title"> <%= article.title %> </p>
+            <p class="author"><span>|</span>By <%= article.author %></p>
+            <p class="meta-content"><%= article.metaContent %></p>
+            <% let index = articles.indexOf(article) %>
+            <div class="buttons">
+                <form action="/view" method="post">
+                    <input type="number" name="index" value="<%= index %>" hidden>
+                    <input type="submit" value="View" style="border-top-left-radius: 7px;">
+                </form>
+                <form action="/edit" method="post">
+                    <input type="number" name="index" value="<%= index %>" hidden>
+                    <input type="submit" value="Edit">
+                </form>
+                <form action="/delete" method="post">
+                    <input type="number" name="index" value="<%= index %>" hidden>
+                    <input type="submit" value="Delete">
+                </form>
+            </div>
+            
+        </div>
+    <% }); %>
+</div>
+</main>
+
+<%- include('partials/footer.ejs') %>
