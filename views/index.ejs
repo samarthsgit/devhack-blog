@@ -29,7 +29,7 @@
 </main>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('load', () => {
         let totalArticles = document.querySelectorAll(".article").length;
         for (let i=0; i < totalArticles; i++) {
             document.querySelector(`#title${i}`).addEventListener('click', () => {
